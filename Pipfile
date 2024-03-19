@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+mkmig = "python manage.py makemigrations"
+mig = "python manage.py migrate --run-syncdb"
+dev = "python manage.py runserver"
+
+[packages]
+django = "*"
+python-xbrl = "*"
+requests = "*"
+djangorestframework = "*"
+selenium = "*"
+random-user-agent = "*"
+lxml = "*"
+bs4 = "*"
+html = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
