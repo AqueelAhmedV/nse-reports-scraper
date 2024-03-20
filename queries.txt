@@ -1,0 +1,2 @@
+SELECT company_name, renewable_electric/total_electric AS renewable_energy_usage FROM emissions_app_emissionreport WHERE end_date = '2023-03-31' ORDER BY  renewable_energy_usage DESC LIMIT 10
+SELECT company_name, (scope_1_emissions+scope_2_emissions)/turnover AS emissions_intensity FROM emissions_app_emissionreport WHERE end_date = '2023-03-31' AND emissions_intensity > 0 ORDER BY emissions_intensity ASC LIMIT 10

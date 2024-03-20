@@ -22,15 +22,7 @@ class EmissionReport(models.Model):
             locals()[field_name] = models.CharField(
                 max_length=200, verbose_name=field_schema["verbose_name"], default='')
 
-    @property
-    def renewable_electric_usage(self):
-        renewable = self.renewable_electric
-        total = self.total_electric
-        if total == -1 or renewable == -1:
-            return -1
-        else:
-            return renewable/total
-
+    
 
     def __str__(self):
         return self.report_id
